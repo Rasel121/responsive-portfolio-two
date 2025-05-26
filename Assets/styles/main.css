@@ -1,0 +1,383 @@
+/*======================================
+               Google Fonts
+======================================*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sen:wght@400..800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*======================================
+               Default Style
+======================================*/
+:root{
+
+  /* Background Color  */
+  --main-color: #ffffff;
+  --second-color: #ff6464;
+
+  /* Text Color  */
+  --text-color: #21243D;
+  --text-color2:#8695A4;
+
+  /* Padding  */
+  --padding: 1rem;
+  --p-2: 2rem;
+  --p-8px: 0.5rem;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+/* Main Container  */
+.main-container{
+  max-width: 1152px;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(196, 185, 185, 0.439);
+  align-items: center;
+  position:sticky;
+  z-index: 1000;
+  top: 0;
+  padding: var(--p-2);
+  border-radius: 20px;
+}
+
+.header-logo h2{
+  font-size: 32px;
+  color: var(--text-color);
+  display: none;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav ul li{
+  list-style: none;
+}
+
+.header nav ul li a{
+  font-size: 1.5rem;
+  color: #21243D;
+  font-weight: 600;
+}
+
+.header nav ul li a:hover{
+  color: #ff6464;
+}
+
+/* Header Responsive  */
+@media(min-width:769px){
+    .header{
+        justify-content: space-between;
+    }
+    
+    .header-logo h2{
+        display: block;
+    }
+
+
+}
+
+/* Header Ended  */
+
+
+/*===============================
+          Hero Area Started
+================================*/
+
+.hero{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 30px 10px;
+  gap: 30px;
+}
+
+.hero-details{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.hero-title{
+  width: 312px;
+}
+
+.hero-details .hero-title h2{
+  font-size: 2rem;
+  line-height: 40px;
+}
+
+
+.hero-img img{
+  width: 174px;
+}
+
+.hero-btn button{
+    background-color: var(--second-color);
+    padding: 10px 30px;
+    font-size: 22px;
+    color: var(--main-color);
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+}
+
+/* hero responsive  */
+@media(min-width:769px){
+  .hero{
+    flex-direction: row;
+    gap: 170px;
+    padding: 140px 0px;
+    justify-content: center;
+    width: 858px;
+    margin: 0 auto;
+  }
+
+  .hero-img img{
+    width: 243px;
+  }
+
+  .hero-details{
+    width: 497px;
+    text-align: left;
+    gap: 50px;
+  }
+
+  .hero-title{
+    width: 512px;
+  }
+}
+
+
+/*===============================
+          Hero Area Ended
+================================*/
+
+
+/*===============================
+          Post Area Started
+================================*/
+.post-container{
+    background-color: #EDF7FA;
+    padding: 40px 10px;
+  }
+
+.post{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-title{
+  text-align: center;
+}
+
+.post-title a{
+  display: none;
+}
+
+.post .post-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card .card{
+  width: 334px;
+  height: 266px;
+  padding: 20px ;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* Post Responsive */
+@media (min-width:769px){
+  .post-container{
+    background-color: #EDF7FA;
+  }
+
+  .post{
+    width: 858px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .post .post-card{
+    flex-direction: row;
+  }
+
+  .post-card .card{
+  width: 418px;
+  height: 295px;
+  justify-content: space-around;
+  }
+
+  .card-title h3{
+    font-size: 26px;
+  }
+
+  .card-date span{
+    font-size: 18px;
+  }
+
+  .post-title{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .post-title a{
+    display: flex;
+    color: #00A8CC;
+    font-size: 18px;
+  }
+}
+
+
+/*===============================
+          Post Area Ended
+================================*/
+
+
+/*===============================
+          Featured Area Started
+================================*/
+
+.feature{
+  width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 10px 120px 10px;
+}
+
+.featured-card:nth-child(3),
+.featured-card:nth-child(4)
+{
+  display: none;
+}
+
+.featured-title{
+  text-align: center;
+  font-weight: normal;
+}
+
+.featured-card{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.featured-card .f-card-img img{
+  width: 339px;
+}
+
+.f-card-details{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.f-card-details .f-details-title h2{
+  font-size: 24px;
+}
+
+.f-details-date {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.f-details-date button{
+  background-color: var(--text-color);
+  color: var(--main-color);
+  padding: 8px 20px ;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.f-details-date span{
+  color: var(--text-color2);
+}
+
+/* featured responsive */
+@media(min-width:769px){
+  .feature{
+    width: 858px;
+    justify-content: start;
+  }
+
+  .featured-title{
+    text-align: left;
+  }
+
+  .featured-card{
+    flex-direction: row;
+  }
+
+  
+.featured-card .f-card-img img{
+  width: 246px;
+}
+
+.featured-card:nth-child(3),
+.featured-card:nth-child(4)
+{
+  display: flex;
+}
+}
+
+/*===============================
+          Featured Area Ended
+================================*/
+
+/*===============================
+          Footer Area Started
+================================*/
+
+footer{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+footer .footer-social a{
+  color: var(--text-color);
+  font-size: 35px;
+  margin: 20px;
+}
+
+/*===============================
+          Footer Area Ended
+================================*/
